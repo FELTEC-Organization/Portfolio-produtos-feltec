@@ -12,123 +12,123 @@ export type Product = {
 export const PRODUCTS: Product[] = [
   {
     id: 'p1',
-    name: 'Cadeira Ergo Pro',
-    description: 'Cadeira ergonômica premium para longas jornadas de trabalho. Conforto garantido.',
+    name: 'Produto Lorem A',
+    description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor.',
     price: 499.90,
     category: 'Cadeiras',
-    tags: ['ergonômica', 'home office', 'premium'],
+    tags: ['lorem', 'ipsum', 'dolor'],
     inStock: true,
-    image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80'
+    image: 'https://picsum.photos/seed/product1/800/600'
   },
   {
     id: 'p2',
-    name: 'Mesa Compact Oak',
-    description: 'Mesa compacta em carvalho maciço, perfeita para espaços menores sem abrir mão do estilo.',
+    name: 'Produto Ipsum B',
+    description: 'Consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore.',
     price: 699.00,
     category: 'Mesas',
-    tags: ['compacta', 'madeira', 'carvalho'],
+    tags: ['consectetur', 'adipiscing', 'elit'],
     inStock: true,
-    image: 'https://images.unsplash.com/photo-1549497538-303791108f95?w=800&q=80'
+    image: 'https://picsum.photos/seed/product2/800/600'
   },
   {
     id: 'p3',
-    name: 'Sofá Cloud 3 Lugares',
-    description: 'Sofá de design minimalista com maciez incomparável. Tecido premium importado.',
+    name: 'Produto Dolor C',
+    description: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim.',
     price: 2599.00,
     category: 'Sofás',
-    tags: ['minimalista', '3 lugares', 'premium'],
+    tags: ['tempor', 'incididunt', 'labore'],
     inStock: false,
-    image: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80'
+    image: 'https://picsum.photos/seed/product3/800/600'
   },
   {
     id: 'p4',
-    name: 'Vaso Cerâmico Terra',
-    description: 'Vaso artesanal em cerâmica com acabamento rústico. Peça única feita à mão.',
+    name: 'Produto Magna D',
+    description: 'Ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud.',
     price: 149.90,
     category: 'Decoração',
-    tags: ['cerâmica', 'rústico', 'artesanal'],
+    tags: ['magna', 'aliqua', 'enim'],
     inStock: true,
-    image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80'
+    image: 'https://picsum.photos/seed/product4/800/600'
   },
   {
     id: 'p5',
-    name: 'Luminária Desk LED',
-    description: 'Luminária de mesa com tecnologia LED e carregamento USB. Design moderno e funcional.',
+    name: 'Produto Veniam E',
+    description: 'Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi.',
     price: 229.00,
     category: 'Eletrônicos',
-    tags: ['LED', 'USB', 'moderno'],
+    tags: ['veniam', 'nostrud', 'exercitation'],
     inStock: true,
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80'
+    image: 'https://picsum.photos/seed/product5/800/600'
   },
   {
     id: 'p6',
-    name: 'Cadeira Barcelona Réplica',
-    description: 'Réplica fiel da icônica Barcelona Chair. Couro legítimo e estrutura cromada.',
+    name: 'Produto Nostrud F',
+    description: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.',
     price: 1299.00,
     category: 'Cadeiras',
-    tags: ['clássico', 'couro', 'designer'],
+    tags: ['ullamco', 'laboris', 'aliquip'],
     inStock: true,
-    image: 'https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?w=800&q=80'
+    image: 'https://picsum.photos/seed/product6/800/600'
   },
   {
     id: 'p7',
-    name: 'Mesa Jantar Extensível',
-    description: 'Mesa de jantar em madeira nobre com sistema extensível. Comporta até 8 pessoas.',
+    name: 'Produto Laboris G',
+    description: 'Ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute irure.',
     price: 1899.00,
     category: 'Mesas',
-    tags: ['extensível', 'jantar', 'madeira nobre'],
+    tags: ['commodo', 'consequat', 'duis'],
     inStock: true,
-    image: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&q=80'
+    image: 'https://picsum.photos/seed/product7/800/600'
   },
   {
     id: 'p8',
-    name: 'Sofá Chesterfield 2L',
-    description: 'Sofá clássico Chesterfield em couro envelhecido. Elegância atemporal.',
+    name: 'Produto Commodo H',
+    description: 'Ex ea commodo consequat duis aute irure dolor in reprehenderit voluptate.',
     price: 3299.00,
     category: 'Sofás',
-    tags: ['chesterfield', 'couro', 'clássico'],
+    tags: ['aute', 'irure', 'reprehenderit'],
     inStock: true,
-    image: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80'
+    image: 'https://picsum.photos/seed/product8/800/600'
   },
   {
     id: 'p9',
-    name: 'Espelho Veneziano Grande',
-    description: 'Espelho decorativo estilo veneziano com moldura trabalhada em detalhes.',
+    name: 'Produto Irure I',
+    description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.',
     price: 899.00,
     category: 'Decoração',
-    tags: ['espelho', 'veneziano', 'decorativo'],
+    tags: ['dolor', 'voluptate', 'cillum'],
     inStock: false,
-    image: 'https://images.unsplash.com/photo-1618220179428-22790b461013?w=800&q=80'
+    image: 'https://picsum.photos/seed/product9/800/600'
   },
   {
     id: 'p10',
-    name: 'Smart TV 55" 4K',
-    description: 'Smart TV 4K HDR com tecnologia OLED. Experiência cinematográfica em casa.',
+    name: 'Produto Voluptate J',
+    description: 'In reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.',
     price: 2799.00,
     category: 'Eletrônicos',
-    tags: ['smart tv', '4K', 'OLED'],
+    tags: ['velit', 'esse', 'fugiat'],
     inStock: true,
-    image: 'https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=800&q=80'
+    image: 'https://picsum.photos/seed/product10/800/600'
   },
   {
     id: 'p11',
-    name: 'Poltrona Egg Amarela',
-    description: 'Poltrona icônica Egg em tecido amarelo vibrante. Conforto e design em perfeita harmonia.',
+    name: 'Produto Esse K',
+    description: 'Velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat.',
     price: 1599.00,
     category: 'Cadeiras',
-    tags: ['poltrona', 'design', 'colorido'],
+    tags: ['cillum', 'pariatur', 'excepteur'],
     inStock: true,
-    image: 'https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?w=800&q=80'
+    image: 'https://picsum.photos/seed/product11/800/600'
   },
   {
     id: 'p12',
-    name: 'Mesa Centro Vidro',
-    description: 'Mesa de centro em vidro temperado com base em aço inox. Leveza e sofisticação.',
+    name: 'Produto Fugiat L',
+    description: 'Eu fugiat nulla pariatur excepteur sint occaecat cupidatat non proident.',
     price: 799.00,
     category: 'Mesas',
-    tags: ['vidro', 'centro', 'moderno'],
+    tags: ['pariatur', 'cupidatat', 'proident'],
     inStock: true,
-    image: 'https://images.unsplash.com/photo-1549497538-303791108f95?w=800&q=80'
+    image: 'https://picsum.photos/seed/product12/800/600'
   }
 ];
 

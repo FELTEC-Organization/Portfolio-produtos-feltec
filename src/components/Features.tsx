@@ -23,10 +23,10 @@ export function Features() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-serif font-bold text-foreground mb-6">
-            Por que nos escolher?
+            Lorem ipsum dolor?
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Compromisso com a excelência em cada detalhe do seu projeto
+            Lorem ipsum dolor sit amet consectetur adipiscing elit
           </p>
         </motion.div>
 

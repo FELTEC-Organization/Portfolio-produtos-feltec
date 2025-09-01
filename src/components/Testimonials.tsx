@@ -14,10 +14,10 @@ export function Testimonials() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-serif font-bold text-foreground mb-6">
-            O que nossos clientes dizem
+            Lorem ipsum dolor sit
           </h2>
           <p className="text-lg text-muted-foreground">
-            Experiências reais de quem confia no nosso trabalho
+            Lorem ipsum dolor sit amet consectetur adipiscing
           </p>
         </motion.div>
 

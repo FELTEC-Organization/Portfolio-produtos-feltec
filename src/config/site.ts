@@ -1,106 +1,106 @@
 export const siteConfig = {
-  name: "Elegance Store",
-  description: "Móveis e decoração com design sofisticado para transformar seu ambiente",
-  slogan: "Transforme seu espaço com elegância",
+  name: "Sua Loja",
+  description: "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor",
+  slogan: "Lorem ipsum dolor sit amet",
   
   contact: {
-    address: "Rua das Flores, 123 - Centro, São Paulo - SP",
-    phone: "+55 11 99999-9999",
-    whatsapp: "5511999999999",
-    email: "contato@elegancestore.com.br",
-    hours: "Segunda a Sábado: 9h às 18h"
+    address: "Lorem Ipsum, 123 - Centro, Cidade - UF",
+    phone: "+00 00 00000-0000",
+    whatsapp: "000000000000",
+    email: "contato@sualoja.com",
+    hours: "Segunda a Sexta: 9h às 18h"
   },
   
   social: {
-    instagram: "https://instagram.com/elegancestore",
-    whatsapp: "https://wa.me/5511999999999",
-    facebook: "https://facebook.com/elegancestore", 
-    tiktok: "https://tiktok.com/@elegancestore"
+    instagram: "https://instagram.com/sualoja",
+    whatsapp: "https://wa.me/000000000000",
+    facebook: "https://facebook.com/sualoja", 
+    tiktok: "https://tiktok.com/@sualoja"
   },
   
   about: {
     title: "Sobre Nós",
-    description: "Com mais de 15 anos de experiência no mercado de móveis e decoração, a Elegance Store se destaca pela qualidade excepcional de seus produtos e pelo atendimento personalizado. Nossa missão é transformar ambientes através de peças únicas que combinam funcionalidade, conforto e design sofisticado."
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
   },
   
   features: [
     {
-      title: "Qualidade Premium",
-      description: "Produtos selecionados com os melhores materiais e acabamento impecável",
+      title: "Lorem Ipsum",
+      description: "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod",
       icon: "award"
     },
     {
-      title: "Design Exclusivo", 
-      description: "Peças únicas que refletem personalidade e sofisticação",
+      title: "Dolor Sit Amet", 
+      description: "Consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore",
       icon: "palette"
     },
     {
-      title: "Atendimento Personalizado",
-      description: "Consultoria especializada para criar o ambiente dos seus sonhos",
+      title: "Consectetur Adipiscing",
+      description: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
       icon: "users"
     },
     {
-      title: "Entrega Garantida",
-      description: "Entregamos em todo Brasil com segurança e pontualidade",
+      title: "Tempor Incididunt",
+      description: "Ut labore et dolore magna aliqua ut enim ad minim veniam quis",
       icon: "truck"
     },
     {
-      title: "Pós-venda Excepcional", 
-      description: "Suporte completo mesmo após a compra",
+      title: "Magna Aliqua", 
+      description: "Ut enim ad minim veniam quis nostrud exercitation ullamco",
       icon: "headphones"
     },
     {
-      title: "Projetos Sob Medida",
-      description: "Desenvolvemos soluções personalizadas para seu espaço",
+      title: "Nostrud Exercitation",
+      description: "Ullamco laboris nisi ut aliquip ex ea commodo consequat",
       icon: "ruler"
     }
   ],
   
   timeline: [
     {
-      year: "2008",
-      title: "Fundação",
-      description: "Início da jornada com foco em móveis de qualidade e design diferenciado"
+      year: "2010",
+      title: "Lorem Ipsum",
+      description: "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod"
     },
     {
-      year: "2012", 
-      title: "Expansão Digital",
-      description: "Lançamento da loja online, ampliando nosso alcance nacional"
+      year: "2015", 
+      title: "Dolor Sit Amet",
+      description: "Consectetur adipiscing elit sed do eiusmod tempor incididunt"
     },
     {
-      year: "2016",
-      title: "Parcerias Internacionais",
-      description: "Estabelecemos parcerias com designers renomados da Europa"
+      year: "2018",
+      title: "Consectetur Adipiscing",
+      description: "Sed do eiusmod tempor incididunt ut labore et dolore magna"
     },
     {
-      year: "2020",
-      title: "Sustentabilidade",
-      description: "Implementação de práticas sustentáveis em toda nossa cadeia produtiva"
+      year: "2021",
+      title: "Tempor Incididunt",
+      description: "Ut labore et dolore magna aliqua ut enim ad minim veniam"
     },
     {
-      year: "2023",
-      title: "Inovação Contínua", 
-      description: "Liderança em tendências com catálogo sempre atualizado"
+      year: "2024",
+      title: "Magna Aliqua", 
+      description: "Ut enim ad minim veniam quis nostrud exercitation ullamco"
     }
   ],
   
   testimonials: [
     {
-      name: "Maria Silva",
-      role: "Arquiteta",
-      content: "A Elegance Store transformou completamente minha sala. A qualidade dos móveis superou minhas expectativas!",
+      name: "Lorem Ipsum",
+      role: "Lorem Ipsum",
+      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       rating: 5
     },
     {
-      name: "João Santos",
-      role: "Designer de Interiores", 
-      content: "Trabalho com eles há 3 anos. Sempre encontro peças incríveis e o atendimento é excepcional.",
+      name: "Dolor Sit",
+      role: "Consectetur Adipiscing", 
+      content: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud.",
       rating: 5
     },
     {
-      name: "Ana Costa",
-      role: "Cliente",
-      content: "Meu apartamento ficou um sonho! O atendimento personalizado fez toda diferença na escolha das peças.",
+      name: "Magna Aliqua",
+      role: "Tempor Incididunt",
+      content: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       rating: 5
     }
   ]

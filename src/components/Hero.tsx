@@ -27,11 +27,11 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-foreground mb-6 leading-tight"
           >
-            Transforme seu{' '}
+            Lorem ipsum{' '}
             <span className="bg-gradient-hero bg-clip-text text-transparent">
-              espaço
+              dolor sit
             </span>{' '}
-            com elegância
+            amet consectetur
           </motion.h1>
           
           <motion.p
@@ -51,14 +51,14 @@ export function Hero() {
           >
             <Button asChild variant="hero" size="lg" className="text-lg px-8 py-6">
               <Link to="/produtos">
-                Ver Produtos
+                Lorem Ipsum
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
             
             <Button asChild variant="elegant" size="lg" className="text-lg px-8 py-6">
               <a href={`#sobre`}>
-                Conheça Nossa História
+                Dolor Sit Amet
               </a>
             </Button>
           </motion.div>
