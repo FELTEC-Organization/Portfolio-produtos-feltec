@@ -13,10 +13,10 @@ export function Timeline() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-serif font-bold text-foreground mb-6">
-            Lorem Ipsum
+            Nossa história
           </h2>
           <p className="text-lg text-muted-foreground">
-            Lorem ipsum dolor sit amet consectetur
+            Feltec Solutions IT
           </p>
         </motion.div>
 

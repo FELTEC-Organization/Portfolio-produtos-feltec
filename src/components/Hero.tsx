@@ -27,11 +27,10 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-foreground mb-6 leading-tight"
           >
-            Lorem ipsum{' '}
+            Bem vindo a{' '}
             <span className="bg-gradient-hero bg-clip-text text-transparent">
-              dolor sit
+              Feltec Solutions IT
             </span>{' '}
-            amet consectetur
           </motion.h1>
           
           <motion.p
@@ -51,14 +50,14 @@ export function Hero() {
           >
             <Button asChild variant="hero" size="lg" className="text-lg px-8 py-6">
               <Link to="/produtos">
-                Lorem Ipsum
+                Nossos serviços
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
             
             <Button asChild variant="elegant" size="lg" className="text-lg px-8 py-6">
               <a href={`#sobre`}>
-                Dolor Sit Amet
+                Nossa história
               </a>
             </Button>
           </motion.div>

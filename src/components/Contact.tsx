@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 export function Contact() {
   const handleWhatsApp = () => {
-    const message = encodeURIComponent("Olá! Gostaria de saber mais sobre os produtos da Elegance Store.");
+    const message = encodeURIComponent("Olá! Gostaria de saber mais sobre os serviços da Feltec.");
     window.open(`https://wa.me/${siteConfig.contact.whatsapp}?text=${message}`, '_blank');
   };
 
@@ -23,7 +23,7 @@ export function Contact() {
             Entre em Contato
           </h2>
           <p className="text-lg text-muted-foreground">
-            Estamos aqui para ajudar você a encontrar a peça perfeita
+            Estamos aqui para ajudar você a encontrar a melhor solução para o seu negócio
           </p>
         </motion.div>
 

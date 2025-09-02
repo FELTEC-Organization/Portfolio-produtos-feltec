@@ -97,9 +97,9 @@ export function Footer() {
           <p className="text-muted-foreground text-sm">
             © {currentYear} {siteConfig.name}. Todos os direitos reservados.
           </p>
-          <p className="text-muted-foreground text-sm">
+          {/* <p className="text-muted-foreground text-sm">
             Desenvolvido com ❤️ para sua casa dos sonhos
-          </p>
+          </p> */}
         </div>
       </div>
     </footer>

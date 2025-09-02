@@ -102,10 +102,10 @@ export default function Products() {
               className="text-center"
             >
               <h1 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-4">
-                Nossos Produtos
+                Nossos Serviços
               </h1>
               <p className="text-lg text-muted-foreground">
-                Encontre a peça perfeita para seu espaço
+                Encontre a Melhor solução digital.
               </p>
             </motion.div>
           </div>

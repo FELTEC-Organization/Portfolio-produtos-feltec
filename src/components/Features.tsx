@@ -1,14 +1,12 @@
-import { Award, Palette, Users, Truck, Headphones, Ruler } from 'lucide-react';
-import { siteConfig } from '@/config/site';
-import { motion } from 'framer-motion';
+import { LayoutDashboard, Wrench, PenTool, Smartphone } from "lucide-react";
+import { siteConfig } from "@/config/site";
+import { motion } from "framer-motion";
 
 const iconMap = {
-  award: Award,
-  palette: Palette,
-  users: Users,
-  truck: Truck,
-  headphones: Headphones,
-  ruler: Ruler,
+  "layout-dashboard": LayoutDashboard,
+  "wrench": Wrench,
+  "pen-tool": PenTool,
+  "smartphone": Smartphone,
 };
 
 export function Features() {
@@ -23,14 +21,14 @@ export function Features() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-serif font-bold text-foreground mb-6">
-            Lorem ipsum dolor?
+            Nossos serviços
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Lorem ipsum dolor sit amet consectetur adipiscing elit
+            Todas as soluções que oferecemos para sua empresa!
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
           {siteConfig.features.map((feature, index) => {
             const Icon = iconMap[feature.icon as keyof typeof iconMap];
             
