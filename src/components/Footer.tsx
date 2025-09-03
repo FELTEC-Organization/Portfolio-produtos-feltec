@@ -13,16 +13,16 @@ export function Footer() {
   };
 
   return (
-    <footer className="bg-muted/50 border-t border-border/50">
+    <footer className="bg-black border-t border-border/50">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-hero rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">E</span>
+              <div className="w-8 h-8 rounded-lg flex items-center justify-center">
+                <img src="/LogoFeltec.png" alt="" />
               </div>
-              <span className="font-serif text-xl font-semibold text-foreground">
+              <span className="font-serif text-xl font-semibold text-white">
                 {siteConfig.name}
               </span>
             </div>
