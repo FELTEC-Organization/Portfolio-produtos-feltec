@@ -38,9 +38,11 @@ export function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-hero rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">E</span>
-            </div>
+            <img
+              src="/LogoFeltec.png"
+              alt="LogoFeltec.png"
+              className="w-8 h-8 rounded-lg object-cover"
+            />
             <span className="font-serif text-xl font-semibold text-foreground">
               {siteConfig.name}
             </span>
@@ -52,11 +54,10 @@ export function Header() {
               <Link
                 key={item.name}
                 to={item.href}
-                className={`relative px-3 py-2 text-sm font-medium transition-colors ${
-                  isActive(item.href)
+                className={`relative px-3 py-2 text-sm font-medium transition-colors ${isActive(item.href)
                     ? 'text-primary'
                     : 'text-muted-foreground hover:text-foreground'
-                }`}
+                  }`}
               >
                 {item.name}
                 {isActive(item.href) && (
@@ -80,7 +81,7 @@ export function Header() {
             >
               {getThemeIcon()}
             </Button>
-            
+
             <Button
               variant="ghost"
               size="icon"
@@ -109,11 +110,10 @@ export function Header() {
                   key={item.name}
                   to={item.href}
                   onClick={() => setIsMenuOpen(false)}
-                  className={`block px-3 py-2 text-base font-medium rounded-md transition-colors ${
-                    isActive(item.href)
+                  className={`block px-3 py-2 text-base font-medium rounded-md transition-colors ${isActive(item.href)
                       ? 'text-primary bg-primary/10'
                       : 'text-muted-foreground hover:text-foreground hover:bg-muted'
-                  }`}
+                    }`}
                 >
                   {item.name}
                 </Link>
