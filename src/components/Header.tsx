@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useCallback, useState, useEffect } from "react";
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Sun, Moon, Laptop } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -6,10 +6,13 @@ import { useTheme } from '@/hooks/use-theme';
 import { siteConfig } from '@/config/site';
 import { motion, AnimatePresence } from 'framer-motion';
 
+
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { theme, setTheme } = useTheme();
   const location = useLocation();
+  const [isTop, setTop] = useState(false);
+
 
   const navigation = [
     { name: 'Início', href: '/' },
@@ -24,6 +27,16 @@ export function Header() {
     else setTheme('light');
   };
 
+
+  const handleScroll = useCallback(() => {
+    setTop(window.scrollY > 10);
+  }, []);
+  
+    useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [handleScroll]);
+
   const getThemeIcon = () => {
     switch (theme) {
       case 'light': return <Sun className="h-4 w-4" />;
@@ -33,7 +46,13 @@ export function Header() {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-2xl border-b border-border/50 shadow-2xl">
+    <header
+      className={`fixed top-0 z-50 w-full h-16 text-zinc-900 dark:text-white transition-colors duration-300
+        ${isTop
+          ? "bg-zinc-300/70 dark:bg-zinc-900/70 backdrop-blur-md shadow-2xl shadow-black"
+          : "bg-zinc-300 dark:bg-zinc-900"
+        }`}
+    >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -55,8 +74,8 @@ export function Header() {
                 key={item.name}
                 to={item.href}
                 className={`relative px-3 py-2 text-sm font-medium transition-colors ${isActive(item.href)
-                    ? 'text-primary'
-                    : 'text-muted-foreground hover:text-foreground'
+                  ? 'text-primary'
+                  : 'text-muted-foreground hover:text-foreground'
                   }`}
               >
                 {item.name}
@@ -111,8 +130,8 @@ export function Header() {
                   to={item.href}
                   onClick={() => setIsMenuOpen(false)}
                   className={`block px-3 py-2 text-base font-medium rounded-md transition-colors ${isActive(item.href)
-                      ? 'text-primary bg-primary/10'
-                      : 'text-muted-foreground hover:text-foreground hover:bg-muted'
+                    ? 'text-primary bg-primary/10'
+                    : 'text-muted-foreground hover:text-foreground hover:bg-muted'
                     }`}
                 >
                   {item.name}
