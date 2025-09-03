@@ -16,7 +16,7 @@ export const PRODUCTS: Product[] = [
     category: 'Portfolios',
     tags: ['Portfolio', 'pessoal', 'profissional'],
     inStock: true,
-    image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d' // laptop com design portfolio
+    image: 'https://tse2.mm.bing.net/th/id/OIP.r6Z7x4s1Uj8L7zOYPPOk8gHaEK?rs=1&pid=ImgDetMain&o=7&rm=3' 
   },
   {
     id: 'p2',
@@ -52,7 +52,7 @@ export const PRODUCTS: Product[] = [
     category: 'Ecommerce',
     tags: ['Ecommerce', 'profissional', 'produto'],
     inStock: true,
-    image: ''
+    image: 'https://tse4.mm.bing.net/th/id/OIP.HZl99Up2wIcaHIztLLmttAHaE7?rs=1&pid=ImgDetMain&o=7&rm=3'
   },
     {
     id: 'p6',
@@ -61,7 +61,7 @@ export const PRODUCTS: Product[] = [
     category: 'IA',
     tags: ['profissional', 'pessoal', 'Portfolio'],
     inStock: true,
-    image: '' 
+    image: '/portfolio-premium.jpg' 
   },
     {
     id: 'p7',
@@ -70,16 +70,16 @@ export const PRODUCTS: Product[] = [
     category: 'IA',
     tags: ['profissional', 'Portfolio', 'Produtos'],
     inStock: true,
-    image: ''
+    image: '/portfolio-produtos.jpg.jpg'
   },
     {
     id: 'p8',
     name: 'Aprimoramentos de site',
-    description: 'Mudanças no design, internacionalização, adição de funcionalidades, etc...',
+    description: 'Mudanças no design, internacionalização, adição de funcionalidades, SEO, etc...',
     category: 'Sites',
     tags: ['Sites', 'suporte', 'aprimoramento'],
     inStock: true,
-    image: '' 
+    image: 'https://tse1.mm.bing.net/th/id/OIP.A0yTI4G_SYb69_Uf4boPxgAAAA?rs=1&pid=ImgDetMain&o=7&rm=3' 
   },
 ];
 
