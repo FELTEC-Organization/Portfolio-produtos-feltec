@@ -1,5 +1,5 @@
 export const siteConfig = {
-  name: "Feltec Solutions IT",
+  name: "FELTEC",
   description: "Soluções de TI para o seu negócio",
   slogan: "Transformando sua empresa com soluções digitais",
   
