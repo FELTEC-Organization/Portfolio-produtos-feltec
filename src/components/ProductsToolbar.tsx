@@ -5,9 +5,8 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Label } from '@/components/ui/label';
-import { Switch } from '@/components/ui/switch';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
+import { Collapsible, CollapsibleContent } from '@/components/ui/collapsible';
 import { FilterOptions, debounce } from '@/lib/filters';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -15,7 +14,6 @@ interface ProductsToolbarProps {
   filters: FilterOptions;
   onFiltersChange: (filters: FilterOptions) => void;
   categories: readonly string[];
-  priceRange: { min: number; max: number };
   activeFilters: Array<{ type: string; label: string; value: string }>;
   onRemoveFilter: (type: string, value?: string) => void;
   totalResults: number;
@@ -25,7 +23,6 @@ export function ProductsToolbar({
   filters,
   onFiltersChange,
   categories,
-  priceRange,
   activeFilters,
   onRemoveFilter,
   totalResults
@@ -54,20 +51,8 @@ export function ProductsToolbar({
     onFiltersChange({ ...filters, categories: newCategories });
   };
 
-  const handlePriceChange = (field: 'min' | 'max', value: string) => {
-    const numValue = parseInt(value) || 0;
-    onFiltersChange({
-      ...filters,
-      [field === 'min' ? 'minPrice' : 'maxPrice']: numValue
-    });
-  };
-
   const handleSortChange = (sortBy: FilterOptions['sortBy']) => {
     onFiltersChange({ ...filters, sortBy });
-  };
-
-  const handleStockToggle = (checked: boolean) => {
-    onFiltersChange({ ...filters, onlyInStock: checked });
   };
 
   return (
@@ -93,8 +78,6 @@ export function ProductsToolbar({
           <SelectContent>
             <SelectItem value="name-asc">Nome (A-Z)</SelectItem>
             <SelectItem value="name-desc">Nome (Z-A)</SelectItem>
-            <SelectItem value="price-asc">Menor preço</SelectItem>
-            <SelectItem value="price-desc">Maior preço</SelectItem>
           </SelectContent>
         </Select>
 
@@ -138,56 +121,6 @@ export function ProductsToolbar({
                       </Label>
                     </div>
                   ))}
-                </div>
-              </div>
-
-              {/* Price Range */}
-              <div>
-                <h3 className="font-semibold text-sm text-foreground mb-3">Faixa de Preço</h3>
-                <div className="space-y-3">
-                  <div>
-                    <Label htmlFor="min-price" className="text-xs text-muted-foreground">
-                      Preço mínimo
-                    </Label>
-                    <Input
-                      id="min-price"
-                      type="number"
-                      placeholder={String(priceRange.min)}
-                      value={filters.minPrice}
-                      onChange={(e) => handlePriceChange('min', e.target.value)}
-                      min={priceRange.min}
-                      max={priceRange.max}
-                    />
-                  </div>
-                  <div>
-                    <Label htmlFor="max-price" className="text-xs text-muted-foreground">
-                      Preço máximo
-                    </Label>
-                    <Input
-                      id="max-price"
-                      type="number"
-                      placeholder={String(priceRange.max)}
-                      value={filters.maxPrice}
-                      onChange={(e) => handlePriceChange('max', e.target.value)}
-                      min={priceRange.min}
-                      max={priceRange.max}
-                    />
-                  </div>
-                </div>
-              </div>
-
-              {/* Stock Filter */}
-              <div>
-                <h3 className="font-semibold text-sm text-foreground mb-3">Disponibilidade</h3>
-                <div className="flex items-center space-x-2">
-                  <Switch
-                    id="stock-filter"
-                    checked={filters.onlyInStock}
-                    onCheckedChange={handleStockToggle}
-                  />
-                  <Label htmlFor="stock-filter" className="text-sm">
-                    Apenas produtos disponíveis
-                  </Label>
                 </div>
               </div>
             </div>

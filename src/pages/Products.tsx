@@ -6,48 +6,44 @@ import { ProductsToolbar } from '@/components/ProductsToolbar';
 import { Pagination } from '@/components/Pagination';
 import { Footer } from '@/components/Footer';
 import { PRODUCTS, CATEGORIES } from '@/data/products';
-import { filterProducts, getPriceRange, type FilterOptions } from '@/lib/filters';
+import { filterProducts,  type FilterOptions } from '@/lib/filters';
 import { motion } from 'framer-motion';
 
 const ITEMS_PER_PAGE = 12;
 
 export default function Products() {
   const [searchParams, setSearchParams] = useSearchParams();
-  const priceRange = useMemo(() => getPriceRange(PRODUCTS), []);
-  
+
+
   // State from URL params
   const [filters, setFilters] = useState<FilterOptions>({
     search: searchParams.get('q') || '',
     categories: searchParams.get('categoria') ? searchParams.get('categoria')!.split(',') : [],
-    minPrice: parseInt(searchParams.get('min') || String(priceRange.min)),
-    maxPrice: parseInt(searchParams.get('max') || String(priceRange.max)),
-    onlyInStock: searchParams.get('disponivel') === 'true',
     sortBy: (searchParams.get('ordem') as FilterOptions['sortBy']) || 'name-asc'
   });
-  
+
+
   const currentPage = parseInt(searchParams.get('pagina') || '1');
 
-  // Update URL when filters change
-  useEffect(() => {
-    const params = new URLSearchParams();
-    
-    if (filters.search) params.set('q', filters.search);
-    if (filters.categories.length > 0) params.set('categoria', filters.categories.join(','));
-    if (filters.minPrice !== priceRange.min) params.set('min', String(filters.minPrice));
-    if (filters.maxPrice !== priceRange.max) params.set('max', String(filters.maxPrice));
-    if (filters.onlyInStock) params.set('disponivel', 'true');
-    if (filters.sortBy !== 'name-asc') params.set('ordem', filters.sortBy);
-    if (currentPage > 1) params.set('pagina', String(currentPage));
-    
-    setSearchParams(params);
-  }, [filters, currentPage, setSearchParams, priceRange]);
+
+useEffect(() => {
+  const params = new URLSearchParams();
+
+  if (filters.search) params.set('q', filters.search);
+  if (filters.categories.length > 0) params.set('categoria', filters.categories.join(','));
+  if (filters.sortBy !== 'name-asc') params.set('ordem', filters.sortBy);
+
+  params.set('pagina', '1');
+
+  setSearchParams(params);
+}, [filters, setSearchParams]);
 
   // Filter and paginate products
-  const filteredProducts = useMemo(() => 
-    filterProducts(PRODUCTS, filters), 
+  const filteredProducts = useMemo(() =>
+    filterProducts(PRODUCTS, filters),
     [filters]
   );
-  
+
   const totalPages = Math.ceil(filteredProducts.length / ITEMS_PER_PAGE);
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
   const paginatedProducts = filteredProducts.slice(startIndex, startIndex + ITEMS_PER_PAGE);
@@ -69,10 +65,6 @@ export default function Products() {
           return { ...prev, search: '' };
         case 'category':
           return { ...prev, categories: prev.categories.filter(c => c !== value) };
-        case 'price':
-          return { ...prev, minPrice: priceRange.min, maxPrice: priceRange.max };
-        case 'stock':
-          return { ...prev, onlyInStock: false };
         default:
           return prev;
       }
@@ -82,15 +74,12 @@ export default function Products() {
   const activeFilters = [
     ...(filters.search ? [{ type: 'search', label: `Busca: "${filters.search}"`, value: filters.search }] : []),
     ...filters.categories.map(cat => ({ type: 'category', label: cat, value: cat })),
-    ...((filters.minPrice !== priceRange.min || filters.maxPrice !== priceRange.max) ? 
-      [{ type: 'price', label: `R$ ${filters.minPrice} - R$ ${filters.maxPrice}`, value: 'price' }] : []),
-    ...(filters.onlyInStock ? [{ type: 'stock', label: 'Apenas disponíveis', value: 'stock' }] : [])
   ];
 
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      
+
       <main className="pt-16">
         {/* Page Header */}
         <section className="py-12 bg-gradient-subtle border-b border-border/50">
@@ -118,7 +107,6 @@ export default function Products() {
               filters={filters}
               onFiltersChange={setFilters}
               categories={CATEGORIES}
-              priceRange={priceRange}
               activeFilters={activeFilters}
               onRemoveFilter={removeFilter}
               totalResults={filteredProducts.length}

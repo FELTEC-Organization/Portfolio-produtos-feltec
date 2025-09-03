@@ -2,7 +2,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { MessageCircle } from 'lucide-react';
 import { Product } from '@/data/products';
-import { formatPrice, getWhatsAppUrl } from '@/lib/filters';
+import {  getWhatsAppUrl } from '@/lib/filters';
 import { siteConfig } from '@/config/site';
 import { motion } from 'framer-motion';
 
@@ -68,10 +68,6 @@ export function ProductCard({ product }: ProductCardProps) {
           ))}
         </div>
 
-        {/* Price */}
-        <div className="text-2xl font-bold text-primary mb-4">
-          {formatPrice(product.price)}
-        </div>
 
         {/* WhatsApp Button */}
         <Button
