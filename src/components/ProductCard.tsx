@@ -50,12 +50,12 @@ export function ProductCard({ product }: ProductCardProps) {
       </div>
 
       {/* Content */}
-      <div className="p-6">
+      <div className="p-6 flex flex-col h-full">
         <h3 className="font-semibold text-lg text-foreground mb-2 group-hover:text-primary transition-colors">
           {product.name}
         </h3>
         
-        <p className="text-sm text-muted-foreground mb-3 line-clamp-2">
+        <p className="text-sm text-muted-foreground mb-3 overflow-hidden line-clamp-1 group-hover:line-clamp-none transition-all duration-300">
           {product.description}
         </p>
 

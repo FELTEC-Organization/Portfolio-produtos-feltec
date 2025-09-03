@@ -10,7 +10,7 @@ export function Contact() {
   };
 
   return (
-    <section id="contato" className="py-20 bg-background">
+    <section id="contato" className="py-20 bg-background flex flex-col items-center">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -91,9 +91,9 @@ export function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="flex items-center"
+            className="flex flex-col items-center"
           >
-            <div className="bg-gradient-hero p-8 rounded-2xl shadow-glow text-center w-full">
+            <div className="bg-gradient-hero p-8 rounded-2xl shadow-glow text-center w-full h-full sm:w-1/2 md:w-full flex flex-col items-center">
               <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
                 <MessageCircle className="h-8 w-8 text-white" />
               </div>
@@ -110,8 +110,8 @@ export function Contact() {
               <Button
                 onClick={handleWhatsApp}
                 variant="secondary"
-                size="lg"
-                className="bg-white text-primary hover:bg-white/90 font-semibold px-8 py-6 text-lg"
+                size="default"
+                className="bg-white text-primary hover:bg-white/90 font-semibold text-lg"
               >
                 <MessageCircle className="mr-2 h-5 w-5" />
                 Chamar no WhatsApp

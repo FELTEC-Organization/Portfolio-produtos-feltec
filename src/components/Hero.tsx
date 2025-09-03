@@ -58,6 +58,7 @@ export function Hero() {
             <Button asChild variant="elegant" size="lg" className="text-lg px-8 py-6">
               <a href={`#sobre`}>
                 Nossa história
+                <ArrowRight className="ml-2 h-5 w-5" />
               </a>
             </Button>
           </motion.div>
