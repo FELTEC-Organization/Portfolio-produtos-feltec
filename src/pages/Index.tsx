@@ -5,7 +5,7 @@ import { Timeline } from '@/components/Timeline';
 import { Features } from '@/components/Features';
 // import { Testimonials } from '@/components/Testimonials';
 import { Contact } from '@/components/Contact';
-import { Footer } from '@/components/Footer';
+import Footer from '@/components/Footer';
 
 const Index = () => {
   return (
@@ -19,7 +19,7 @@ const Index = () => {
         {/* <Testimonials /> */}
         <Contact />
       </main>
-      <Footer />
+      <Footer object={undefined} />
     </div>
   );
 };

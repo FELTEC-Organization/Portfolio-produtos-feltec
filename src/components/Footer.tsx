@@ -1,107 +1,170 @@
-import { Link } from 'react-router-dom';
-import { Instagram, MessageCircle, Facebook } from 'lucide-react';
-import { siteConfig } from '@/config/site';
+import React from "react";
+import {
+  MapPin,
+  Mail,
+  Phone,
+  AlarmClock,
+  Github,
+  Instagram,
+  Linkedin,
+  MessageCircle,
+} from "lucide-react";
 
-export function Footer() {
-  const currentYear = new Date().getFullYear();
-  
-  const socialIcons = {
-    instagram: Instagram,
-    whatsapp: MessageCircle,
-    facebook: Facebook,
-    tiktok: MessageCircle, // Using MessageCircle as placeholder for TikTok
-  };
+export default function Footer({ object = { metadata: { contact: null } } }) {
+  const buttonUrl = "https://api.whatsapp.com/send?phone=15981223418&text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20Feltec.";
+  const contact = object.metadata.contact;
 
   return (
-    <footer className="bg-black border-t border-border/50">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Brand */}
-          <div className="md:col-span-2">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 rounded-lg flex items-center justify-center">
-                <img src="/LogoFeltec.png" alt="" />
-              </div>
-              <span className="font-serif text-xl font-semibold text-white">
-                {siteConfig.name}
-              </span>
-            </div>
-            <p className="text-muted-foreground mb-6 max-w-md">
-              {siteConfig.description}
-            </p>
+    <footer className="bg-zinc-900 text-gray-300 px-6 py-6 text-sm">
+      {/* Container principal com grid adaptável */}
+      <div className="max-w-10/12 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="flex flex-col items-center gap-4 text-center">
+          {/* LOGO + TEXTO */}
+          <a href="/" className="flex items-center gap-3">
+            <img
+              src="/LogoFeltec.png"
+              alt="Logo Feltec"
+              width={80}
+              height={80}
+              className="object-contain"
+            />
+            <span
+              className={`text-white text-4xl font-audiowide`}
+            >
+              FELTEC
+            </span>
+          </a>
+
+          {/* ÍCONES SOCIAIS - ALINHADOS AO CENTRO */}
+          <div className="flex gap-4 justify-center text-feltec-primary-light">
+            <SocialIcon
+              href={buttonUrl}
+              icon={<MessageCircle size={30} />}
+              label="WhatsApp"
+            />
+           
+            <SocialIcon
+              href="https://www.instagram.com/feltec_solutions"
+              icon={<Instagram size={30} />}
+              label="Instagram"
+            />
+            <SocialIcon
+              href="https://linkedin.com/company/feltec-solutions-it"
+              icon={<Linkedin size={30} />}
+              label="LinkedIn"
+            />
+            <SocialIcon
+              href="https://github.com/FELTEC-Organization"
+              icon={<Github size={30} />}
+              label="GitHub"
+            />
             
-            {/* Social Links */}
-            <div className="flex items-center space-x-4">
-              {Object.entries(siteConfig.social).map(([platform, url]) => {
-                const Icon = socialIcons[platform as keyof typeof socialIcons];
-                return (
-                  <a
-                    key={platform}
-                    href={url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-10 h-10 bg-primary/10 hover:bg-primary/20 rounded-lg flex items-center justify-center transition-colors"
-                  >
-                    <Icon className="h-5 w-5 text-primary" />
-                  </a>
-                );
-              })}
-            </div>
-          </div>
-
-          {/* Quick Links */}
-          <div>
-            <h3 className="font-semibold text-foreground mb-4">Links Rápidos</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link to="/" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Início
-                </Link>
-              </li>
-              <li>
-                <Link to="/produtos" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Produtos
-                </Link>
-              </li>
-              <li>
-                <a href="#sobre" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Sobre
-                </a>
-              </li>
-              <li>
-                <a href="#contato" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Contato
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Contact Info */}
-          <div>
-            <h3 className="font-semibold text-foreground mb-4">Contato</h3>
-            <ul className="space-y-2 text-sm">
-              <li className="text-muted-foreground">
-                {siteConfig.contact.phone}
-              </li>
-              <li className="text-muted-foreground">
-                {siteConfig.contact.email}
-              </li>
-              <li className="text-muted-foreground">
-                {siteConfig.contact.hours}
-              </li>
-            </ul>
           </div>
         </div>
 
-        <div className="border-t border-border/50 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-muted-foreground text-sm">
-            © {currentYear} {siteConfig.name}. Todos os direitos reservados.
-          </p>
-          {/* <p className="text-muted-foreground text-sm">
-            Desenvolvido com ❤️ para sua casa dos sonhos
-          </p> */}
+        {/* CONTATOS */}
+        <div className="flex flex-col gap-4">
+          <ContactItem
+            icon={<MapPin size={16} />}
+            title="Endereço"
+            text="Av. Itavuvu, 11.777 - Jardim Santa Cecilia, Sorocaba - SP, 18078-005"
+          />
+          <ContactItem
+            icon={<Mail size={16} />}
+            title="E-mail"
+            text="feltec.solutions@gmail.com"
+            isLink
+            linkHref="mailto:feltec.solutions@gmail.com"
+          />
+          <ContactItem
+            icon={<Phone size={16} />}
+            title="Telefone"
+            text="(15) 981223418"
+            isLink
+            linkHref={`tel:${"(15) 981223418".replace(/\D/g, "")}`}
+          />
+          <ContactItem
+            icon={<AlarmClock size={16} />}
+            title="Funcionamento"
+            text="Segunda à Sexta 08:00 às 18:00"
+          />
+        </div>
+
+        {/* MAPA */}
+        <div className="rounded-md overflow-hidden border border-zinc-700 lg:max-w-96">
+          <iframe
+            title="Mapa Feltec"
+            src="https://maps.google.com/maps?q=Av.%20Itavuvu,%2011777,%20Sorocaba,%20SP&t=&z=13&ie=UTF8&iwloc=&output=embed"
+            width="100%"
+            height="100%"
+            loading="lazy"
+            className="border-0"
+          />
         </div>
       </div>
+
+      {/* DIVISOR */}
+      <hr className="my-6 border-zinc-700" />
+
+      {/* COPYRIGHT */}
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-xs text-zinc-500">
+        <span>
+          © {new Date().getFullYear()} FELTEC. Todos os direitos reservados.
+        </span>
+        <span>Desenvolvido pela equipe FELTEC - V1.1.0</span>
+      </div>
     </footer>
+  );
+}
+
+function ContactItem({
+  icon,
+  title,
+  text,
+  isLink = false,
+  linkHref = "",
+}: {
+  icon: React.ReactNode;
+  title: string;
+  text: string;
+  isLink?: boolean;
+  linkHref?: string;
+}) {
+  return (
+    <div className="flex items-start gap-3">
+      <div className="mt-1 text-feltec-primary-light">{icon}</div>
+      <div>
+        <h4 className="font-semibold text-white leading-tight">{title}</h4>
+        {isLink ? (
+          <a href={linkHref} className="hover:underline text-zinc-300">
+            {text}
+          </a>
+        ) : (
+          <p className="text-zinc-400">{text}</p>
+        )}
+      </div>
+    </div>
+  );
+}
+
+function SocialIcon({
+  href,
+  icon,
+  label,
+}: {
+  href: string;
+  icon: React.ReactNode;
+  label: string;
+}) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={label}
+      className="hover:text-blue-600 transition-colors"
+    >
+      {icon}
+    </a>
   );
 }

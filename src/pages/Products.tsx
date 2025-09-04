@@ -4,7 +4,7 @@ import { Header } from '@/components/Header';
 import { ProductCard } from '@/components/ProductCard';
 import { ProductsToolbar } from '@/components/ProductsToolbar';
 import { Pagination } from '@/components/Pagination';
-import { Footer } from '@/components/Footer';
+import Footer from '@/components/Footer';
 import { PRODUCTS, CATEGORIES } from '@/data/products';
 import { filterProducts,  type FilterOptions } from '@/lib/filters';
 import { motion } from 'framer-motion';
@@ -152,7 +152,7 @@ useEffect(() => {
         </section>
       </main>
 
-      <Footer />
+      <Footer object={undefined} />
     </div>
   );
 }
