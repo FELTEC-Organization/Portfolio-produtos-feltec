@@ -2,7 +2,7 @@ export type Product = {
   id: string;
   name: string;
   description: string;
-  category: 'Portfolios' | 'Sites' | 'Apps' | 'Landing Pages' | 'IA' | 'Ecommerce';
+  category: 'Portfolios' | 'Sites' | 'Apps' | 'Landing Pages' | 'Automatizações' | 'Ecommerce';
   tags: string[];
   inStock: boolean;
   image: string;
@@ -11,76 +11,76 @@ export type Product = {
 export const PRODUCTS: Product[] = [
   {
     id: 'p1',
-    name: 'Portfolio',
-    description: 'Landing page personalizada com a sua marca, ideal para profissionais autônomos e para currículo',
-    category: 'Portfolios',
-    tags: ['Portfolio', 'pessoal', 'profissional'],
+    name: 'Aprimoramento de Sites',
+    description: `Transformamos seu site com redesign moderno, internacionalização, SEO, novas funcionalidades e manutenção contínua.`,
+    category: 'Sites',
+    tags: ['Sites', 'Aprimoramento', 'SEO', 'Manutenção'],
     inStock: true,
-    image: 'https://tse2.mm.bing.net/th/id/OIP.r6Z7x4s1Uj8L7zOYPPOk8gHaEK?rs=1&pid=ImgDetMain&o=7&rm=3' 
+    image: 'https://tse1.mm.bing.net/th/id/OIP.A0yTI4G_SYb69_Uf4boPxgAAAA?rs=1&pid=ImgDetMain&o=7&rm=3',
   },
   {
     id: 'p2',
-    name: 'Websites',
-    description: 'Website profissional para sua empresa, com catálogo de produtos',
-    category: 'Sites',
-    tags: ['Websites', 'Profissional', 'produtos'],
+    name: 'Chatbots',
+    description: `Chatbot inteligente para atendimento 24h, com integração no site ou WhatsApp, fluxos customizados e agendamento de serviços.`,
+    category: 'Automatizações',
+    tags: ['Chatbot', 'Automação', 'IA', 'Atendimento'],
     inStock: true,
-    image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop' // código rodando em tela de pc
+    image: 'https://images.unsplash.com/photo-1718241905462-56e7b9f722f3?q=80&w=928&auto=format&fit=crop',
   },
   {
     id: 'p3',
-    name: 'Landing Pages',
-    description: 'Landing page para comércios, catálogos, etc..',
+    name: 'Landing Pages Modelos',
+    description: `Página única e impactante para captar clientes, com design focado em conversão, integração com formulários e SEO otimizado.`,
     category: 'Landing Pages',
-    tags: ['Landing Pages', 'Profissional'],
+    tags: ['Landing Pages', 'Conversão', 'Marketing'],
     inStock: true,
-    image: 'https://images.unsplash.com/photo-1559028012-481c04fa702d?q=80&w=736&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' 
+    image: '/models.png',
   },
   {
     id: 'p4',
-    name: 'Chatbots',
-    description: 'Chatbot feito especialmente para seu site',
-    category: 'IA',
-    tags: ['chatbot', 'automação', 'ia'],
+    name: 'Portfolio Personalizado',
+    description: `Portfolio com sua marca, seções sobre, contato e projetos, design responsivo e ideal para profissionais autônomos.`,
+    category: 'Portfolios',
+    tags: ['Portfolio', 'Personalizado', 'Pessoal', 'Profissional'],
     inStock: true,
-    image: 'https://images.unsplash.com/photo-1718241905462-56e7b9f722f3?q=80&w=928&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' // ícone de IA/chatbot futurista
+    image: 'https://tse2.mm.bing.net/th/id/OIP.r6Z7x4s1Uj8L7zOYPPOk8gHaEK?rs=1&pid=ImgDetMain&o=7&rm=3',
   },
-    {
+  {
     id: 'p5',
-    name: 'E-commerce',
-    description: 'E-commerce pensado para seu negócio',
-    category: 'Ecommerce',
-    tags: ['Ecommerce', 'profissional', 'produto'],
+    name: 'Portfolio + Produtos ou Serviços',
+    description: `Portfolio completo com abas separadas para produtos ou serviços, design responsivo e integrações básicas de contato e orçamento.`,
+    category: 'Portfolios',
+    tags: ['Portfolio', 'Produtos', 'Serviços', 'Profissional'],
     inStock: true,
-    image: 'https://tse4.mm.bing.net/th/id/OIP.HZl99Up2wIcaHIztLLmttAHaE7?rs=1&pid=ImgDetMain&o=7&rm=3'
+    image: '/prodct.png',
   },
-    {
+  {
     id: 'p6',
-    name: 'Portfolio premium',
-    description: 'Portfolio aprimorado, com adicionais como: tema escuro, intenacionalização e carrousel de serviços',
-    category: 'IA',
-    tags: ['profissional', 'pessoal', 'Portfolio'],
+    name: 'Portfolio Premium',
+    description: `Portfolio aprimorado com tema escuro, internacionalização, carrossel interativo e animações personalizadas.`,
+    category: 'Portfolios',
+    tags: ['Portfolio', 'Premium', 'Profissional'],
     inStock: true,
-    image: '/portfolio-premium.jpg' 
+    image: '/portfolio-premium.jpg',
   },
-    {
+  {
     id: 'p7',
-    name: 'Portfolio com aba produtos',
-    description: 'Portfolio completo + aba separada para produtos ou serviços',
-    category: 'IA',
-    tags: ['profissional', 'Portfolio', 'Produtos'],
-    inStock: true,
-    image: '/portfolio-produtos.jpg.jpg'
-  },
-    {
-    id: 'p8',
-    name: 'Aprimoramentos de site',
-    description: 'Mudanças no design, internacionalização, adição de funcionalidades, SEO, etc...',
+    name: 'Website Profissional',
+    description: `Website corporativo completo com múltiplas páginas, catálogo de produtos/serviços, formulários, integrações e SEO otimizado.`,
     category: 'Sites',
-    tags: ['Sites', 'suporte', 'aprimoramento'],
+    tags: ['Website', 'Profissional', 'Corporativo'],
     inStock: true,
-    image: 'https://tse1.mm.bing.net/th/id/OIP.A0yTI4G_SYb69_Uf4boPxgAAAA?rs=1&pid=ImgDetMain&o=7&rm=3' 
+    image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop',
+  },
+  {
+    id: 'p8',
+    name: 'E-commerce',
+    description: `Loja virtual personalizada com gestão de produtos, categorias, estoque, integração de pagamentos, área do cliente e SEO.`,
+    category: 'Ecommerce',
+    tags: ['E-commerce', 'Loja virtual', 'Vendas online'],
+    inStock: true,
+    image: 'ecom.jpg',
   },
 ];
 
-export const CATEGORIES = ['IA', 'Landing Pages', 'Sites', 'Apps', 'Portfolios', 'Ecommerce' ] as const;
+export const CATEGORIES = ['Automatizações', 'Landing Pages', 'Sites', 'Apps', 'Portfolios', 'Ecommerce'] as const;

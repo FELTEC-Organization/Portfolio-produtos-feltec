@@ -35,11 +35,11 @@ export function ProductCard({ product }: ProductCardProps) {
         />
         
         {/* Stock Badge */}
-        <div className="absolute top-3 right-3">
+        {/* <div className="absolute top-3 right-3">
           <Badge variant={product.inStock ? 'secondary' : 'destructive'} className="text-xs">
             {product.inStock ? 'Em estoque' : 'Esgotado'}
           </Badge>
-        </div>
+        </div> */}
 
         {/* Category Badge */}
         <div className="absolute top-3 left-3">
