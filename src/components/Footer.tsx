@@ -111,7 +111,7 @@ export default function Footer({ object = { metadata: { contact: null } } }) {
         <span>
           © {new Date().getFullYear()} FELTEC. Todos os direitos reservados.
         </span>
-        <span>Desenvolvido pela equipe FELTEC - V1.1.0</span>
+        <span>Desenvolvido pela equipe FELTEC - V1.2.0</span>
       </div>
     </footer>
   );
